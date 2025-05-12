@@ -9,11 +9,8 @@ import Register from './components/Account/Register';
 import ForgotPassword from './components/Account/ForgotPassword';
 import MovieDetail from './pages/MovieDetail';
 import WatchPage from './pages/WatchPage';
-
-
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
-
-
+import ExplorePage from './pages/ExplorePage';
 function App() {
     return (
         <div className="app">
@@ -28,9 +25,9 @@ function App() {
                         <Route path='/forgot-password' element={<ForgotPassword />} />
                         <Route path="/phim/:movieId" element={<MovieDetail />} /> {/* Route cho MovieDetail */}
                         <Route path="/search" element={<SearchPage />} />
-                        <Route path="/phim-moi" element={<div>Phim mới</div>} />
-                        <Route path="/phim-bo" element={<div>Phim bộ</div>} />
-                        <Route path="/phim-le" element={<div>Phim lẻ</div>} />
+                        <Route path="/phim-moi" element={<ExplorePage />} />
+                        <Route path="/phim-bo" element={<ExplorePage />} />
+                        <Route path="/phim-le" element={<ExplorePage />} />
 
                         {/* Route cho trang xem phim */}
                         <Route path="/xem-phim/:movieId" element={<WatchPage />} />
