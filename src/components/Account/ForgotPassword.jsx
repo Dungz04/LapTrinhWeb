@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import '../../styles/cssAccount/ForgotPassword.css';
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('');
@@ -27,27 +26,35 @@ const ForgotPassword = () => {
     };
 
     return (
-        <div className="forgot-password-container">
-            <div className="forgot-password-background">
-                <div className="forgot-password-box">
-                    <h2>Quên mật khẩu</h2>
+        <div className="flex justify-center items-center min-h-screen bg-black text-white">
+            <div className="flex w-full max-w-3xl bg-gray-900 rounded-lg overflow-hidden shadow-2xl relative">
+                <div 
+                    className="flex-1 bg-cover bg-center opacity-20" 
+                    style={{ backgroundImage: "url('https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fmih10uhu1464fx1kr0by.jpg')" }}
+                ></div>
+                <div className="flex-1 !p-12 bg-gray-900 text-left">
+                    <h2 className="!mb-6 !text-4xl text-red-600 text-center">Quên mật khẩu</h2>
                     <form onSubmit={handleForgotPassword}>
-                        <div className="form-group">
+                        <div className="!mb-4">
                             <input
                                 type="email"
                                 placeholder="Nhập email của bạn"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 aria-label="Email"
+                                className="w-full !p-3 !mt-1 bg-gray-700 border border-gray-600 rounded-md text-white outline-none focus:border-red-600 transition-colors"
                             />
                         </div>
-                        {message && <p className="message">{message}</p>}
-                        <button type="submit" className="forgot-password-button">
+                        {message && <p className="text-red-400 !mb-2 text-sm">{message}</p>}
+                        <button 
+                            type="submit" 
+                            className="w-full !p-3 bg-gradient-to-r from-red-800 to-red-950 text-white rounded-lg text-lg cursor-pointer hover:from-red-600 hover:to-red-800 transition-all"
+                        >
                             Gửi yêu cầu
                         </button>
                     </form>
-                    <p className="switch-link">
-                        Quay lại <NavLink to="/login">Đăng nhập</NavLink>
+                    <p className="text-center !mt-4">
+                        Quay lại <NavLink to="/login" className="text-red-600 hover:underline">Đăng nhập</NavLink>
                     </p>
                 </div>
             </div>

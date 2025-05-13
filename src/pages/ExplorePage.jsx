@@ -72,12 +72,12 @@ const ExplorePage = () => {
     return () => window.removeEventListener('scroll', handleScroll); // Dọn dẹp sự kiện
   }, [handleScroll]);
 
-  if (error) return <div className="text-center text-red-500 py-16">Lỗi: {error}</div>;
+  if (error) return <div className="text-center text-red-500 !py-16">Lỗi: {error}</div>;
 
   return (
-    <div className="py-16">
+    <div className="!py-16">
       <div className="container mx-auto">
-        <h3 className="capitalize text-lg lg:text-xl font-semibold my-3">{pageTitle}</h3>
+        <h3 className="capitalize text-lg lg:text-xl font-semibold !my-3 text-white">{pageTitle}</h3>
         <div className="grid grid-cols-[repeat(auto-fit,230px)] gap-6 justify-center lg:justify-start">
           {data.map((exploreData, index) => (
             <Card
@@ -89,11 +89,11 @@ const ExplorePage = () => {
         </div>
         {loading && (
           <div className="flex justify-center items-center h-24">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-red-500"></div>
           </div>
         )}
         {pageNo >= totalPageNo && data.length > 0 && (
-          <p className="text-center text-gray-400 mt-6">Đã tải hết nội dung</p>
+          <p className="text-center text-gray-400 !mt-6">Đã tải hết nội dung</p>
         )}
       </div>
     </div>
