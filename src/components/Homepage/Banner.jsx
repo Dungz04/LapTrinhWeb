@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
-import tmdbApi from "../service/tmdbApi.jsx";
+import tmdbApi from "../../service/tmdbApi.jsx";
 
 const Banner = () => {
     const [content, setContent] = useState([]);

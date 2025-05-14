@@ -4,9 +4,9 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../styles/Top10Movies.css";
+import "../../styles/Top10Movies.css";
 import { Link } from "react-router-dom";
-import tmdbApi from "../service/tmdbApi"; // Đường dẫn giữ nguyên nếu đúng
+import tmdbApi from "../../service/tmdbApi"; // Đường dẫn giữ nguyên nếu đúng
 
 const Top10Movies = () => {
     const [content, setContent] = useState([]); // Đổi tên để phản ánh cả movie và TV

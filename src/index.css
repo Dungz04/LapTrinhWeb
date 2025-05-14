@@ -16,6 +16,16 @@ body {
     font-family: 'Lexend', sans-serif;
 }
 
+/* Đảm bảo body và các container cấp cao có thể cuộn */
+html,
+body {
+    overflow: auto !important;
+    height: auto;
+    -webkit-overflow-scrolling: touch;
+    background: linear-gradient(135deg, #111, #550000);
+    font-family: 'Lexend', sans-serif;
+}
+
 @media (max-width: 768px) {
     body {
         background: linear-gradient(135deg, #111, #330000);
